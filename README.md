@@ -2,6 +2,24 @@
 google starboard
 
 
+## Pre-requisite: GN
+https://gn.googlesource.com/gn/+/main/docs/quick_start.md
+https://www.topcoder.com/thrive/articles/Introduction%20to%20Build%20Tools%20GN%20&%20Ninja
+
+GN you set up your own build directories with the settings you want
+
+Once you set up a build directory, the Ninja files will be automatically regenerated if they're out of date when you build in that directory so you should not have to re-run GN.
+
+BUILD.gn == CMakeLists.txt
+
+```shell
+cd simple-gn-build
+
+gn gen out --root=/home/xcheng85/github.com/xcheng85/gsb/simple-gn-build
+ninja -C out tutorial
+out/tutorial
+```
+
 ## links
 
 https://developers.google.com/youtube/cobalt/docs/development/setup-linux
